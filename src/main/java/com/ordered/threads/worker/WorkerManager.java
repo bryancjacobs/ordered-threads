@@ -33,9 +33,11 @@ public class WorkerManager {
 
             callables.clear();
 
-            callables.add(new Worker("T1", counter++));
-            callables.add(new Worker("T2", counter++));
-            callables.add(new Worker("T3", counter++));
+            callables.add(new Worker("T1", counter++, 1000L));
+
+            callables.add(new Worker("T2", counter++, 5000L));
+
+            callables.add(new Worker("T3", counter++, 0L));
 
             try {
 
